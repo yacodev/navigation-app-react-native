@@ -1,11 +1,24 @@
-import { View, Text } from "react-native";
+import { View, Text, SafeAreaView } from "react-native";
 import React from "react";
 
 const App = () => {
   return (
-    <View className="mt-10">
-      <Text className="text-3xl font-bold text-blue-500">Hola mundo</Text>
-    </View>
+    <SafeAreaView>
+      <View className="mt-6 mx-2.5">
+        <Text className="text-3xl" style={{ fontFamily: "WorkSans-Black" }}>
+          Hola mundo
+        </Text>
+        <Text className="text-3xl text-primary font-work-black ">
+          Hola mundo
+        </Text>
+        <Text className="text-3xl text-secondary-100 font-work-medium ">
+          Hola mundo
+        </Text>
+        <Text className="text-3xl  text-secondary-default font-work-light ">
+          Hola mundo
+        </Text>
+      </View>
+    </SafeAreaView>
   );
 };
 
