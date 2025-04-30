@@ -9,14 +9,14 @@ const HomeScreen = () => {
       <View>
         <CustomButton
           color="primary"
-          onPress={() => router.push("/products")}
+          onPress={() => router.push("/tabs/(stack)/products")}
           className="mt-2"
         >
           Products
         </CustomButton>
         <CustomButton
           color="secondary"
-          onPress={() => router.push("/profile")}
+          onPress={() => router.push("/tabs/(stack)/profile")}
           className="mt-2"
         >
           Profiless
@@ -24,7 +24,7 @@ const HomeScreen = () => {
 
         <CustomButton
           color="tertiary"
-          onPress={() => router.push("/products")}
+          onPress={() => router.push("/tabs/(stack)/settings")}
           className="mt-2"
         >
           Ajustes
@@ -33,14 +33,14 @@ const HomeScreen = () => {
         <CustomButton
           color="primary"
           variant={"text-only"}
-          onPress={() => router.push("/products")}
+          onPress={() => router.push("/tabs/(stack)/products")}
         >
           test
         </CustomButton>
 
-        <Link href="/products" asChild>
+        {/* <Link href="/products" asChild>
           <CustomButton color="primary">Products</CustomButton>
-        </Link>
+        </Link> */}
         {/* <Link href="/products">products</Link>
         <Link href="/profile">profile</Link>
         <Link href="/settings">setting</Link> */}
