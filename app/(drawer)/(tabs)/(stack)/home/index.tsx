@@ -1,22 +1,29 @@
 import { View, Text, SafeAreaView } from "react-native";
 import React from "react";
-import { Link, router } from "expo-router";
+import { Link, router, useNavigation } from "expo-router";
 import CustomButton from "@/components/shared/CustomButton";
+import { DrawerActions } from "@react-navigation/native";
 
 const HomeScreen = () => {
+  const navigation = useNavigation();
+
+  const onToggleDrawer = () => {
+    navigation.dispatch(DrawerActions.toggleDrawer);
+  };
+
   return (
     <SafeAreaView>
       <View>
         <CustomButton
           color="primary"
-          onPress={() => router.push("/tabs/(stack)/products")}
+          onPress={() => router.push("/products")}
           className="mt-2"
         >
           Products
         </CustomButton>
         <CustomButton
           color="secondary"
-          onPress={() => router.push("/tabs/(stack)/profile")}
+          onPress={() => router.push("/profile")}
           className="mt-2"
         >
           Profiless
@@ -24,7 +31,7 @@ const HomeScreen = () => {
 
         <CustomButton
           color="tertiary"
-          onPress={() => router.push("/tabs/(stack)/settings")}
+          onPress={() => router.push("/settings")}
           className="mt-2"
         >
           Ajustes
@@ -33,9 +40,13 @@ const HomeScreen = () => {
         <CustomButton
           color="primary"
           variant={"text-only"}
-          onPress={() => router.push("/tabs/(stack)/products")}
+          onPress={() => router.push("/products")}
         >
           test
+        </CustomButton>
+
+        <CustomButton color="primary" onPress={() => onToggleDrawer()}>
+          Abrir menu
         </CustomButton>
 
         {/* <Link href="/products" asChild>
